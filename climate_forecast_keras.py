@@ -10,6 +10,54 @@ zip_file = ZipFile(zip_path)
 zip_file.extractall()
 csv = "jena_climate_2009_2016.csv"
 
+titles = [
+    "Pressure",
+    "Temperature",
+    "Temperature in Kelvin",
+    "Temperature (dew point)",
+    "Relative Humidity",
+    "Saturation vapor pressure",
+    "Vapor pressure",
+    "Vapor pressure deficit",
+    "Specific humidity",
+    "Water vapor concentration",
+    "Airtight",
+    "Wind speed",
+    "Maximum wind speed",
+    "Wind direction in degrees",
+]
+
+feature_keys = [
+    "p (mbar)",
+    "T (degC)",
+    "Tpot (K)",
+    "Tdew (degC)",
+    "rh (%)",
+    "VPmax (mbar)",
+    "VPact (mbar)",
+    "VPdef (mbar)",
+    "sh (g/kg)",
+    "H2OC (mmol/mol)",
+    "rho (g/m**3)",
+    "wv (m/s)",
+    "max. wv (m/s)",
+    "wd (deg)",
+]
+
+colors = [
+    "blue",
+    "orange",
+    "green",
+    "red",
+    "purple",
+    "brown",
+    "pink",
+    "gray",
+    "olive",
+    "cyan",
+]
+
+
 df = pd.read_csv(csv)
 
 titles = [    "Pressure","Temperature","Temperature in Kelvin","Temperature (dew point)","Relative Humidity",
